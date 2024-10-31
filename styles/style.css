@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* Radio sizes */
+  --radius-50: 5px;
+  --radius-100: 10px;
+  --radius-200: 20px;
+  --radius-300: 30px;
+
+  /* Margin and padding sizes */
+  --spacing-100: 8px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+  --spacing-600: 48px;
+  --spacing-700: 56px;
+  --spacing-800: 64px;
+  --spacing-900: 72px;
+
+  /* Primary Colors */
+  --light-red: 0, 100%, 67%;
+  --green-teal: 166, 100%, 37%;
+  --cobalt-blue: 234, 85%, 45%;
+  --orangey-yellow: 39, 100%, 56%;
+
+  /* Gradients Colors */
+  /* Background */
+  --light-royal-blue: hsl(241, 81%, 54%);
+  --light-slate-blue: hsl(252, 100%, 67%);
+  /* Circle */
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+
+  /* Neutral colors */
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: 221, 100%, 96%;
+  --dark-gray-blue: 224, 30%, 27%;
+  --light-lavender: 241, 100%, 89%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  letter-spacing: 0;
+  font-family: "Hanken Grotesk";
+}
+
+body {
+  min-height: 100vh;
+}
+
+section.result {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--spacing-300);
+  color: hsl(var(--light-lavender));
+  padding: var(--spacing-300) var(--spacing-500);
+  border-radius: 0 0 var(--radius-300) var(--radius-300);
+  background-image: linear-gradient(
+    var(--light-slate-blue),
+    var(--light-royal-blue)
+  );
+  padding-bottom: var(--spacing-500);
+}
+
+.text-preset-1 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.score {
+  border-radius: 100%;
+  padding: var(--spacing-300) var(--spacing-500);
+  background-image: linear-gradient(var(--violet-blue), var(--persian-blue));
+}
+
+.score .result {
+  font-size: 52px;
+  font-weight: 800;
+  color: var(--white);
+}
+
+.text-preset-2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 200%;
+  color: var(--white);
+  letter-spacing: 0.5px;
+}
+
+.paragraph {
+  line-height: 140%;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+  padding: var(--spacing-300);
+}
+
+.category {
+  display: flex;
+  font-weight: 700;
+  padding: var(--spacing-200);
+  border-radius: var(--radius-100);
+}
+
+.reaction {
+  color: hsl(var(--light-red));
+  margin-top: var(--spacing-100);
+  background-color: hsla(var(--light-red), 0.05);
+}
+
+.memory {
+  color: hsl(var(--orangey-yellow));
+  background: hsla(var(--orangey-yellow), 0.05);
+}
+
+.verbal {
+  color: hsl(var(--green-teal));
+  background-color: hsla(var(--green-teal), 0.05);
+}
+
+.visual {
+  color: hsl(var(--cobalt-blue));
+  margin-bottom: var(--spacing-100);
+  background-color: hsla(var(--cobalt-blue), 0.05);
+}
+
+.name {
+  display: flex;
+  margin-right: auto;
+  margin-left: var(--spacing-100);
+}
+
+.result {
+  color: hsla(var(--dark-gray-blue), 0.5);
+}
+
+.result span {
+  color: hsl(var(--dark-gray-blue));
+}
+
+.button {
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--white);
+  padding: var(--spacing-200);
+  border-radius: var(--radius-300);
+  background-color: hsl(var(--dark-gray-blue));
+}
+
+.button:hover {
+  background-image: linear-gradient(
+    var(--light-slate-blue),
+    var(--light-royal-blue)
+  );
+}
+
+@media only screen and (min-width: 768px) {
+  * {
+    font-size: 18px;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    display: flex;
+    border-radius: var(--spacing-300);
+    box-shadow: 0 34px 30px hsla(var(--light-lavender), 0.4);
+  }
+
+  section.result {
+    z-index: 2;
+    gap: var(--spacing-400);
+    padding: var(--spacing-600);
+    border-radius: var(--spacing-400);
+  }
+
+  .score {
+    padding: var(--spacing-500) var(--spacing-700);
+  }
+
+  .score .result {
+    font-size: 72px;
+  }
+
+  .text-preset-1 {
+    font-size: 24px;
+  }
+
+  .text-preset-2 {
+    font-size: 32px;
+  }
+
+  .paragraph {
+    width: 260px;
+  }
+
+  .summary {
+    z-index: 1;
+    width: 280px;
+    margin-left: -24px;
+    gap: var(--spacing-300);
+    padding: var(--spacing-600) var(--spacing-500);
+    padding-left: var(--spacing-800);
+    border-radius: 0 var(--spacing-400) var(--spacing-400) 0;
+  }
+}
